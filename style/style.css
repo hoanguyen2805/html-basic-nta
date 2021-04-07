@@ -444,9 +444,10 @@ body {
   padding: 10px;
   color: #939393;
 }
-.featured__container--footer button i {
-  color: #939393;
+.featured__container--footer button a:active i{
+  color: red;
 }
+
 .featured__image {
   position: relative;
 }
@@ -848,7 +849,9 @@ body {
 .recent-courses .col {
   width: calc(33.333% - 20px);
   margin-top: 30px;
+  margin-bottom: 0.8rem;
 }
+
 .rating {
   font-size: 1.1rem;
   color: #d7bd73;
