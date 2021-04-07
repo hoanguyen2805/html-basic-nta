@@ -28,10 +28,21 @@
                         <div class="top-bar__title">
                             <p><i class="fa fa-paper-plane" aria-hidden="true"></i> Become an Instructor</p>
                             <p><i class="fa fa-thumb-tack" aria-hidden="true"></i> For Enterprise</p>
+
+
+                            <!-- START RESPONSIVE CHO TOP-BAR -->
+                            <div id="myNav" class="overlay">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                            </div>
+                            <button class="openbtn" onclick="openNav()">☰</button>
+                            <!-- END RESPONSIVE CHO TOP-BAR -->
+
+
                         </div>
                     </div>
                     <div class="col">
-                        <ul class="top-bar__menu">
+                        <ul class="top-bar__menu" id="menu">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Services</a></li>
@@ -48,7 +59,7 @@
                         <p><a href="#">LOGO</a></p>
                     </div>
                     <div class="col">
-                        <ul class="top-bar__social--list">
+                        <ul class="top-bar__social--list" id="social">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -58,7 +69,7 @@
                     </div>
                     <div class="col">
                         <form action="">
-                            <div class="search-container">
+                            <div class="search-container" id="form">
                                 <select name="option" id="">
                                     <option value="category" selected>CATEGORY <i class="fa fa-angle-down"></i>
                                     </option>
@@ -72,7 +83,8 @@
                         </form>
                     </div>
                     <div class="col">
-                        <button class="btn btn-login"><i class="fa fa-sign-in" aria-hidden="true">&nbsp;</i> LOGIN &
+                        <button id="btnRegister" class="btn btn-login"><i class="fa fa-sign-in"
+                                aria-hidden="true">&nbsp;</i> LOGIN &
                             REGISTER</button>
                     </div>
                 </div>
@@ -101,7 +113,7 @@
                                 <img src="./images/service01.png" alt="">
                                 <div class="service-container__icon--number">1</div>
                             </div>
-                           
+
                         </div>
                         <h3>Expand Knowledge</h3>
                         <p>Lorem ipsum dolor sit amet, conse ct amet, conse adipiscing elit</p>
@@ -207,7 +219,7 @@
                             <div class="featured__container--footer">
                                 <span><i class="fa fa-bars"></i> 6 Lectures</span>
                                 <span><i class="fa fa-clock-o" aria-hidden="true"></i> 6 Hours</span>
-                            <button><a href="javascript:void(0)"><i class="fa fa-heart"></i></a></button>
+                                <button><a href="javascript:void(0)"><i class="fa fa-heart"></i></a></button>
                             </div>
                         </div>
                     </div>
@@ -393,12 +405,15 @@
                         <h2>Recent Courses</h2>
                         <p>Films can shape the destiny of talented youngsters Courses.</p>
                         <ul class="recent-courses__menu">
-                            <li><a href=""><i class="fa fa-plus" aria-hidden="true"></i> All Categories</a></li>
-                            <li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i> Art</a></li>
-                            <li><a href="" class="active"><i class="fa fa-eraser" aria-hidden="true"></i> Exercise</a>
+                            <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> <span>All
+                                        Categories</span></a></li>
+                            <li><a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> <span>Art</span></a></li>
+                            <li><a href="#" class="active"><i class="fa fa-eraser" aria-hidden="true"></i>
+                                    <span>Exercise</span></a>
                             </li>
-                            <li><a href=""><i class="fa fa-pencil" aria-hidden="true"></i> Material Design</a></li>
-                            <li><a href=""><i class="fa fa-music" aria-hidden="true"></i> Music</a></li>
+                            <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> <span>Material
+                                        Design</span></a></li>
+                            <li><a href="#"><i class="fa fa-music" aria-hidden="true"></i> <span>Music</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -481,7 +496,7 @@
                             <div class="featured__container--footer">
                                 <span><i class="fa fa-bars"></i> 6 Lectures</span>
                                 <span><i class="fa fa-clock-o" aria-hidden="true"></i> 6 Hours</span>
-                            <button><a href="javascript:void(0)"><i class="fa fa-heart"></i></a></button>
+                                <button><a href="javascript:void(0)"><i class="fa fa-heart"></i></a></button>
                             </div>
                         </div>
                     </div>
@@ -535,7 +550,7 @@
                             <div class="featured__container--footer">
                                 <span><i class="fa fa-bars"></i> 6 Lectures</span>
                                 <span><i class="fa fa-clock-o" aria-hidden="true"></i> 6 Hours</span>
-                            <button><a href="javascript:void(0)"><i class="fa fa-heart"></i></a></button>
+                                <button><a href="javascript:void(0)"><i class="fa fa-heart"></i></a></button>
                             </div>
                         </div>
                     </div>
@@ -562,7 +577,7 @@
                             <div class="featured__container--footer">
                                 <span><i class="fa fa-bars"></i> 6 Lectures</span>
                                 <span><i class="fa fa-clock-o" aria-hidden="true"></i> 6 Hours</span>
-                            <button><a href="javascript:void(0)"><i class="fa fa-heart"></i></a></button>
+                                <button><a href="javascript:void(0)"><i class="fa fa-heart"></i></a></button>
                             </div>
                         </div>
                     </div>
@@ -684,6 +699,22 @@
                 var span = this.children[0].style.display = "inline";
                 console.log(span);
             }
+        }
+
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+            document.getElementById("menu").style.display = "inline-block";
+            document.getElementById("social").style.display = "flex";
+            document.getElementById("form").style.display = "flex";
+            document.getElementById("btnRegister").style.display = "inline-block";
+
+        }
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0";
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("social").style.display = "none";
+            document.getElementById("form").style.display = "none";
+            document.getElementById("btnRegister").style.display = "none";
         }
     </script>
 </body>
