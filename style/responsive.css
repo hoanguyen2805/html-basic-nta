@@ -744,4 +744,105 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .app-footer__categories--list > li {
+    margin-right: 2rem;
+  }
+  .provides__introduction h2 {
+    top: 2%;
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  .provides__introduction > p {
+    top: 10%;
+  }
+  .provides__introduction > button {
+    top: 13%;
+  }
+  .recent-courses .col {
+    width: 100%;
+    margin-top: 8px;
+  }
+  .transform__form input {
+    width: 25rem;
+  }
+  .transform .col:first-of-type {
+    width: 100%;
+  }
+  .transform .col:not(:first-of-type) {
+    width: calc(50% - 8px);
+  }
+  .slider h2 {
+    font-size: 1.6rem;
+  }
+  .slider h2:first-of-type {
+    top: 10%;
+    left: 15%;
+  }
+  .slider h2:last-of-type {
+    top: 26%;
+    left: 15%;
+  }
+  .slider p {
+    top: 45%;
+    font-size: 1rem;
+    left: 15%;
+  }
+  .btn-start {
+    top: 60%;
+    padding: 0.5rem 1rem;
+    left: 15%;
+  }
+  .featured .col {
+    width: 100%;
+  }
+  .transform {
+    margin-top: 105rem;
+  }
+  .featured .container-fluid {
+    height: 100rem;
+    bottom: -260%;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  /* .service .col{
+      width: 100%;
+  } */
+  .service-container {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .service-container__icon {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  .service .col {
+    width: calc(50% - 1rem);
+    margin: 2rem 0.5rem;
+  }
+  .service-container__icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .service-container__icon--number {
+    width: 3.4rem;
+    height: 3.4rem;
+    font-size: 1.2rem;
+    line-height: 3.4rem;
+  }
+  .service .row {
+    padding: 3rem 0rem;
+    margin: 0 -0.5rem;
+  }
+  .service .col h3 {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+  }
+  .service .col p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
 }
