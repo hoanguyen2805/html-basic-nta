@@ -349,22 +349,40 @@
                             </p>
                             <div class="description__carousel">
                                 <div class="description__carousel--content">
-                                    <img src="./images/testimanial-avatar.png" alt="">
-                                    <div>
+                                    <!-- <img src="./images/carousel00.png" alt=""> -->
+
+                                    <img src="./images/carousel00.png" alt="" class="hien">
+                                    <img src="./images/carousel01.png" alt="" class="hien">
+                                    <img src="./images/carousel02.png" alt="" class="hien">
+                                    <img src="./images/carousel03.png" alt="" class="hien">
+                                    <div class="user_info">
                                         <h4>Lophie James</h4>
                                         <p>Graphic Designer</p>
                                     </div>
+                                    <div class="user_info">
+                                        <h4>Peter</h4>
+                                        <p>Developer</p>
+                                    </div>
+                                    <div class="user_info">
+                                        <h4>Linda</h4>
+                                        <p>Teacher</p>
+                                    </div>
+                                    <div class="user_info">
+                                        <h4>Jack St.</h4>
+                                        <p>CTO</p>
+                                    </div>
                                 </div>
                                 <ul class="description__carousel--list">
-                                    <li><img src="./images/carousel01.png" alt=""></li>
-                                    <li><img src="./images/carousel02.png" alt=""></li>
-                                    <li><img src="./images/carousel03.png" alt=""></li>
+                                    <li><img src="./images/carousel00.png" alt="" class="mySlides"></li>
+                                    <li><img src="./images/carousel01.png" alt="" class="mySlides"></li>
+                                    <li><img src="./images/carousel02.png" alt="" class="mySlides"></li>
+                                    <li><img src="./images/carousel03.png" alt="" class="mySlides"></li>
                                 </ul>
                                 <!-- <img src="./images/testimonial-carousel.png" alt=""> -->
                             </div>
                             <div class="description__btn">
-                                <button class="btn btn-prev"> &#8592; Prev Review </button>
-                                <button class="btn btn-next"> Next Review &#8594; </button>
+                                <button class="btn btn-prev" onclick="plusSlides(-1)"> &#8592; Prev Review </button>
+                                <button class="btn btn-next" onclick="plusSlides(1)"> Next Review &#8594; </button>
                             </div>
                         </div>
 
@@ -724,6 +742,35 @@
             document.getElementById("social").style.display = "none";
             document.getElementById("form").style.display = "none";
             document.getElementById("btnRegister").style.display = "none";
+        }
+
+
+        var slideIndex = 0;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+
+            var i;
+            var slides = document.getElementsByClassName("mySlides"); //lấy ra 4 cái thẻ hình
+
+            var hinhTo = document.getElementsByClassName("hien");
+
+            var infos = document.getElementsByClassName("user_info");
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.filter = "opacity(20%)";
+                slides[i].style.display = "inline-block";
+
+                hinhTo[i].style.display = "none";
+                infos[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "none";
+            hinhTo[slideIndex].style.display = "inline-block";
+            infos[slideIndex].style.display = "block";
         }
     </script>
 </body>
