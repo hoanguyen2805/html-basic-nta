@@ -443,9 +443,6 @@
   .recent-courses__menu li:not(:last-of-type) {
     margin-right: 2.5rem;
   }
-  .recent-courses__menu {
-    width: 55rem;
-  }
   .featured__container h2 {
     font-size: 1.6rem;
   }
@@ -570,8 +567,8 @@
   .recent-courses__menu li:not(:last-of-type) {
     margin-right: 4.5rem;
   }
-  .recent-courses__menu .active::after {
-    bottom: -1.4rem;
+  .recent-courses__menu li .active::after {
+    bottom: -17px;
   }
   .recent-courses__menu > li:hover span {
     display: inline-block;

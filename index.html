@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./style/responsive.css" type="text/css">
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
     <!-- font -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -71,10 +70,9 @@
                         <form action="">
                             <div class="search-container" id="form">
                                 <select name="option" id="">
-                                    <option value="category" selected>CATEGORY <i class="fa fa-angle-down"></i>
-                                    </option>
-                                    <option value="name">NAME <i class="fa fa-angle-down"></i></option>
-                                    <option value="author">AUTHOR <i class="fa fa-angle-down"></i></option>
+                                    <option value="category" selected>CATEGORY</option>
+                                    <option value="name">NAME</option>
+                                    <option value="author">AUTHOR</i></option>
                                 </select>
                                 <input type="text" placeholder="Search Courses" class="top-bar__input--search"
                                     name="txtSearch">
@@ -429,21 +427,27 @@
                         <h2>Recent Courses</h2>
                         <p>Films can shape the destiny of talented youngsters Courses.</p>
                         <ul class="recent-courses__menu">
-                            <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> <span>All
-                                        Categories</span></a></li>
-                            <li><a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> <span>Art</span></a></li>
-                            <li><a href="#" class="active"><i class="fa fa-eraser" aria-hidden="true"></i>
-                                    <span>Exercise</span></a>
+                            <li><button onclick="filterSelection('all')" class="btn-menu active"><i class="fa fa-plus"
+                                        aria-hidden="true"></i> <span>All
+                                        Categories</span></button></li>
+                            <li><button onclick="filterSelection('art')" class="btn-menu"><i class="fa fa-picture-o"
+                                        aria-hidden="true"></i> <span>Art</span></button>
                             </li>
-                            <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> <span>Material
-                                        Design</span></a></li>
-                            <li><a href="#"><i class="fa fa-music" aria-hidden="true"></i> <span>Music</span></a></li>
+                            <li><button onclick="filterSelection('exercise')" class="btn-menu"><i class="fa fa-eraser"
+                                        aria-hidden="true"></i>
+                                    <span>Exercise</span></button>
+                            </li>
+                            <li><button onclick="filterSelection('design')" class="btn-menu"><i class="fa fa-pencil"
+                                        aria-hidden="true"></i> <span>Material
+                                        Design</span></button></li>
+                            <li><button onclick="filterSelection('music')" class="btn-menu"><i class="fa fa-music"
+                                        aria-hidden="true"></i> <span>Music</span></button></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col">
+                    <div class="col filterDiv art exercise show">
                         <div class="featured__container">
                             <a href="">
                                 <div class="featured__image">
@@ -472,7 +476,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col filterDiv design">
                         <div class="featured__container">
                             <a href="#">
                                 <div class="featured__image">
@@ -501,7 +505,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col filterDiv art">
                         <div class="featured__container">
                             <a href="#">
                                 <div class="featured__image">
@@ -530,7 +534,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col filterDiv music exercise">
                         <div class="featured__container">
                             <a href="#">
                                 <div class="featured__image">
@@ -559,7 +563,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col filterDiv art design">
                         <div class="featured__container">
                             <a href="#">
                                 <div class="featured__image">
@@ -588,7 +592,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col filterDiv exercise">
                         <div class="featured__container">
                             <a href="#">
                                 <div class="featured__image">
@@ -771,6 +775,54 @@
             slides[slideIndex].style.display = "none";
             hinhTo[slideIndex].style.display = "inline-block";
             infos[slideIndex].style.display = "block";
+        }
+
+
+        // filter
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show"); //xóa class show khỏi 
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" "); //tạo thành 1 mảng các class của element đó
+            console.log(arr1);
+            arr2 = name.split(" "); //tạo thành 1 mảng có "show"
+            console.log(arr2);
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+            console.log(element.className);
+        }
+
+        // Add active class to the current button (highlight it)
+        // var btnContainer = document.getElementById("myBtnContainer");
+        var btns = document.getElementsByClassName("btn-menu");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
         }
     </script>
 </body>
