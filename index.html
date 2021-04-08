@@ -71,9 +71,11 @@
                             <div class="search-container" id="form">
                                 <select name="option" id="">
                                     <option value="category" selected>CATEGORY</option>
-                                    <option value="name">NAME</option>
+                                    <option value="name">COURSES</option>
                                     <option value="author">AUTHOR</i></option>
                                 </select>
+                                <span><i class="fa fa-angle-down"></i></span>
+                                <div></div>
                                 <input type="text" placeholder="Search Courses" class="top-bar__input--search"
                                     name="txtSearch">
                                 <button class="btn btn-search"><i class="fa fa-search" aria-hidden="true"></i></button>
@@ -342,8 +344,15 @@
                         <div class="description__testimonials">
                             <h3>Client's Testimonials</h3>
                             <img src="./images/testimonial-icon.png" alt="">
-                            <p>The others comfortable these days are all happ and free list now the world do not
-                                move to the beat of just one drum what be right for you may not be story of a man
+                            <p class="txt">The others comfortable these days are all happ and free list now the world do
+                                not move to the beat of just one drum what be right for you may not be story of a man
+                            </p>
+                            <p class="txt">Dolor eu sint dolor officia nisi dolor cillum eiusmod consectetur nulla.
+                                Consectetur cupidatat sint id ad deserunt nisi fugiat et deserunt.</p>
+                            <p class="txt">Officia ex eu voluptate excepteur eiusmod reprehenderit fugiat Lorem sunt
+                                mollit veniam esse. Ad ex incididunt consectetur aute. Duis minim aute consequat.</p>
+                            <p class="txt">Officia ut minim pariatur esse voluptate eiusmod id incididunt anim aliqua
+                                irure ut. Adipisicing est qui ad occaecat enim consectetur quis.
                             </p>
                             <div class="description__carousel">
                                 <div class="description__carousel--content">
@@ -761,7 +770,7 @@
             var slides = document.getElementsByClassName("mySlides"); //lấy ra 4 cái thẻ hình
 
             var hinhTo = document.getElementsByClassName("hien");
-
+            var listTxt = document.getElementsByClassName("txt");
             var infos = document.getElementsByClassName("user_info");
             if (n >= slides.length) { slideIndex = 0 }
             if (n < 0) { slideIndex = slides.length - 1 }
@@ -771,10 +780,12 @@
 
                 hinhTo[i].style.display = "none";
                 infos[i].style.display = "none";
+                listTxt[i].style.display = "none"
             }
             slides[slideIndex].style.display = "none";
             hinhTo[slideIndex].style.display = "inline-block";
             infos[slideIndex].style.display = "block";
+            listTxt[slideIndex].style.display = "block";
         }
 
 

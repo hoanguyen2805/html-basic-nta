@@ -90,8 +90,11 @@
     margin-right: 2rem;
   }
   .search-container select {
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
+    padding-left: 1.7rem;
+    padding-right: 4rem;
+  }
+  .search-container span {
+    left: 7.5rem;
   }
   .service .col h3 {
     font-size: 1.7rem;
