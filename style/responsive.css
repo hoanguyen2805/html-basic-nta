@@ -83,7 +83,7 @@
     width: calc(40% - 2rem);
   }
   .btn-login {
-    padding: 0.8rem 1rem 0.8rem 1rem;
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
     font-size: 9px;
   }
   .top-bar .row:last-child .col:first-child {
@@ -253,8 +253,8 @@
     width: 58%;
   }
   .top-bar__input--search {
-    height: 3rem;
-    padding-left: 10rem;
+    height: 4rem;
+    /* padding-left: 0rem; */
   }
   .top-bar .row:first-child {
     flex-direction: column;
@@ -282,15 +282,15 @@
     padding: 0.8rem 1.5rem;
   }
   .search-container select {
-    height: 3rem;
+    height: 4rem;
   }
   .search-container button {
-    height: 3rem;
-    width: 3rem;
-    font-size: 1rem;
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.1rem;
   }
   .btn-login {
-    height: 3rem;
+    height: 4rem;
   }
   .top-bar .row:last-child .col:first-child p a {
     font-size: 1.8rem;
