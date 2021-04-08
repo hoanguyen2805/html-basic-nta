@@ -302,7 +302,7 @@
   }
   .featured .container-fluid {
     height: 30rem;
-    bottom: -60%;
+    bottom: -80%;
   }
   .recent-courses .row:nth-of-type(2) {
     padding: 3rem 0rem 5rem 0rem;
@@ -513,12 +513,13 @@
     width: calc(50% - 0.5rem);
     margin-bottom: 1rem;
   }
-  .featured .container-fluid {
+  .featured .container-fluid > img {
     height: 75rem;
-    bottom: -175%;
+    bottom: -350%;
+    object-fit: cover;
   }
   .transform {
-    margin-top: 60rem;
+    margin-top: 65rem;
   }
   .transform__bottom img:last-of-type {
     bottom: 0;
@@ -798,11 +799,11 @@
     width: 100%;
   }
   .transform {
-    margin-top: 105rem;
+    margin-top: 120rem;
   }
-  .featured .container-fluid {
-    height: 100rem;
-    bottom: -260%;
+  .featured .container-fluid > img {
+    height: 130rem;
+    bottom: -280%;
   }
   img {
     width: 100%;
