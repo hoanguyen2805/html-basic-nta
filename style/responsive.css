@@ -873,4 +873,15 @@
   .recent-courses__menu li:not(:last-of-type) {
     margin-right: 2rem;
   }
+  .search-container select{
+    padding-left: 1rem;
+    padding-right: 2rem;
+  }
+  .search-container span {
+    left: 6.8rem;
+    bottom: 1.4rem;
+  }
+  .top-bar__input--search{
+    padding-left: 9rem;
+  }
 }
