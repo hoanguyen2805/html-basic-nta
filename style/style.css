@@ -489,7 +489,7 @@ body {
   color: #939393;
   outline: none;
 }
-.featured__container--footer button a:active i {
+.featured__container--footer button:active i {
   color: red;
 }
 
